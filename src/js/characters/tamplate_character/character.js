@@ -1,29 +1,24 @@
 export class Character {
-  constructor(name, type, attack, defence) {
-    this.name = name;
-    this.type = type;
+  constructor(name, type) {
+    this.name;
+    this.type;
     this.health = 100;
     this.level = 1;
-    this.attack = attack;
-    this.defence = defence;
+    this.attack = 0;
+    this.defence = 0;
+
+    this.validateName(name);
+    this.validateType(type);
   }
 
-  get name() {
-    return this._name;
-  }
-
-  set name(data) {
+  validateName(data) {
     if (data.length < 2 || data.length > 10) {
-      throw new Error('имя персонажа должнобыть не меньше 2 и не больше 1 символов');
+      throw new Error('имя персонажа должно быть не меньше 2 и не больше 1 символов');
     }
-    this._name = data;
+    this.name = data;
   }
 
-  get type() {
-    return this._type;
-  }
-
-  set type(data) {
+  validateType(data) {
     switch (data) {
       case 'Bowman':
       case 'Swordsman':
@@ -31,7 +26,7 @@ export class Character {
       case 'Daemon':
       case 'Undead':
       case 'Zombie':
-        this._type = data;
+        this.type = data;
         break;
       default:
         throw new Error('неверно указан тип персонажа');

@@ -1,7 +1,10 @@
-import { Character } from './tamplate_character/character';
+import { Character } from './tamplate_character/Character';
 
 export class Magician extends Character {
   constructor(...args) {
-    super(args, 10, 40);
+    super(...args);
+    
+    this.attack = 10;
+    this.defence = 40;
   }
 }
