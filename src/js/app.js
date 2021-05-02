@@ -1,13 +1,13 @@
 /* eslint-disable no-unused-vars */
 
-import './characters/bowerman';
+import './characters/Bowerman';
 
-import './characters/swordsman';
+import './characters/Swordsman';
 
-import './characters/magician';
+import './characters/Magician';
 
-import './characters/daemon';
+import './characters/Daemon';
 
-import './characters/undead';
+import './characters/Undead';
 
-import './characters/zombie';
+import './characters/Zombie';

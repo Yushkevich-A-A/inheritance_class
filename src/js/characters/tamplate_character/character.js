@@ -1,7 +1,5 @@
 export class Character {
   constructor(name, type) {
-    this.name;
-    this.type;
     this.health = 100;
     this.level = 1;
     this.attack = 0;

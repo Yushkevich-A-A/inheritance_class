@@ -1,21 +1,20 @@
-import { Daemon } from '../daemon';
+import { Daemon } from '../Daemon';
 
 const expected = {
-    name: 'Lucifer',
-    type: 'Daemon',
-    health: 100,
-    level: 1,
-    attack: 10,
-    defence: 40
-  }
+  name: 'Lucifer',
+  type: 'Daemon',
+  health: 100,
+  level: 1,
+  attack: 10,
+  defence: 40,
+};
 
 test('correct creating daemon', () => {
-      const received = new Daemon('Lucifer', 'Daemon');
+  const received = new Daemon('Lucifer', 'Daemon');
 
-      expect(received).toEqual(expected);
-  })
+  expect(received).toEqual(expected);
+});
 
-  test('correct creating daemon without error', () => {
-
-    expect(() => new Daemon('Lucifer', 'Daemon')).not.toThrowError();
-})
+test('correct creating daemon without error', () => {
+  expect(() => new Daemon('Lucifer', 'Daemon')).not.toThrowError();
+});
